@@ -32,7 +32,11 @@ word.getValue()
 
 function Change() {
     spdVal = 2;
-    radVal = radVal * 4;
+    if (IsPC()) {
+        radVal = 4;
+    } else {
+        radVal = 0.4
+    }
 }
 
 
@@ -40,7 +44,11 @@ var worda = ""
 
 function ChangeYears() {
     spdVal = 0;
-    radVal = radVal;
+    if (IsPC()) {
+        radVal = 1;
+    } else {
+        radVal = 0.1
+    }
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -54,7 +62,11 @@ function ChangeYears() {
 }
 
 function ChangeHours() {
-    radVal = radVal * 1.1;
+    if (IsPC()) {
+        radVal = 1.1;
+    } else {
+        radVal = 0.11
+    }
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -67,7 +79,11 @@ function ChangeHours() {
 }
 
 function ChangeMinutes() {
-    radVal = radVal * 1.2;
+    if (IsPC()) {
+        radVal = 1.2;
+    } else {
+        radVal = 0.12
+    }
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -80,7 +96,11 @@ function ChangeMinutes() {
 }
 
 function ChangeSeconds() {
-    radVal = radVal * 1.5;
+    if (IsPC()) {
+        radVal = 1.3;
+    } else {
+        radVal = 0.13
+    }
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
