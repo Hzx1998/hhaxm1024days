@@ -20,7 +20,6 @@ var message = document.getElementById('message'),
 graVal = 0;
 durVal = 0.3;
 spdVal = 0;
-radVal = 1;
 resVal = 1;
 if (IsPC()) {
     radVal = 1;
@@ -33,7 +32,7 @@ word.getValue()
 
 function Change() {
     spdVal = 2;
-    radVal = 4;
+    radVal = radVal * 4;
 }
 
 
@@ -41,7 +40,7 @@ var worda = ""
 
 function ChangeYears() {
     spdVal = 0;
-    radVal = 1;
+    radVal = radVal;
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -55,7 +54,7 @@ function ChangeYears() {
 }
 
 function ChangeHours() {
-    radVal = 1.1;
+    radVal = radVal * 1.1;
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -68,7 +67,7 @@ function ChangeHours() {
 }
 
 function ChangeMinutes() {
-    radVal = 1.2;
+    radVal = radVal * 1.2;
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
@@ -81,7 +80,7 @@ function ChangeMinutes() {
 }
 
 function ChangeSeconds() {
-    radVal = 1.5;
+    radVal = radVal * 1.5;
     var firstd = '2017/04/13 00:00:00';
     var secondd = new Date();
     var subdate = secondd.getTime() - new Date(firstd).getTime();
