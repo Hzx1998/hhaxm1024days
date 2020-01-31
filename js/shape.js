@@ -1,7 +1,7 @@
 function Shape(x, y, texte) {
     this.x = x;
     this.y = y;
-    this.size = 180;
+    this.size = 150;
 
     this.text = texte;
     this.placement = [];
