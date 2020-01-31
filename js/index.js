@@ -122,7 +122,6 @@ function Changeword() {
 }
 setTimeout("Change()", "2000");
 setTimeout(() => {
-    radVal = radVal / 4;
     graVal = 0.05;
     ChangeYears()
 }, 3000);
