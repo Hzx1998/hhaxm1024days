@@ -17,7 +17,7 @@ function Shape(x, y, texte) {
     if (IsPC()) {
         this.size = 180;
     } else {
-        this.size = 100;
+        this.size = 120;
     }
     this.text = texte;
     this.placement = [];
