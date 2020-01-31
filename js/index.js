@@ -20,8 +20,13 @@ var message = document.getElementById('message'),
 graVal = 0;
 durVal = 0.3;
 spdVal = 0;
-radVal = 0.5;
+radVal = 1;
 resVal = 1;
+if (IsPC()) {
+    radVal = 1;
+} else {
+    radVal = 0.1
+}
 var word = new Shape(W / 2, H / 2, '滑滑♥爱♥小眉的');
 word.getValue()
 
