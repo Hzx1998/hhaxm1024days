@@ -1,14 +1,20 @@
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
 function Shape(x, y, texte) {
     this.x = x;
     this.y = y;
-
-    var win = false;
-    var linux = false;
-    var phone = false;
-    var p = navigator.platform;
-    win = p.indexOf('Win') == 0;
-    linux = p.indexOf('Linux') == 0;
-    if (win || linux) {
+    if (IsPC()) {
         this.size = 180;
     } else {
         this.size = 90;
