@@ -2,12 +2,12 @@ var canvas = document.getElementById('canvas');
 context = canvas.getContext('2d');
 W = canvas.width = window.innerWidth;
 H = canvas.height = window.innerHeight;
-gridY = 5, gridX = 5;
+gridY = 6, gridX = 6;
 
 type = "ball";
 
 colors = [
-    '#00FFFF', '#FFB6C1	'
+    '#00FFFF', '#FFAEB9'
 ];
 
 var message = document.getElementById('message'),

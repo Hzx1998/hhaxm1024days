@@ -1,8 +1,18 @@
 function Shape(x, y, texte) {
     this.x = x;
     this.y = y;
-    this.size = 150;
 
+    var win = false;
+    var linux = false;
+    var phone = false;
+    var p = navigator.platform;
+    win = p.indexOf('Win') == 0;
+    linux = p.indexOf('Linux') == 0;
+    if (win || linux) {
+        this.size = 180;
+    } else {
+        this.size = 90;
+    }
     this.text = texte;
     this.placement = [];
     //this.vectors = [];
@@ -25,7 +35,7 @@ Shape.prototype.getValue = function() {
 
     //draw the shape
     context.textAlign = "center";
-    context.font = this.size + "px arial";
+    context.font = this.size + "px impact";
     context.fillText(this.text, this.x, this.y);
 
     var idata = context.getImageData(0, 0, W, H);
