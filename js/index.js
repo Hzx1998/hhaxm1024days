@@ -25,7 +25,7 @@ if (IsPC()) {
     radVal = 1;
 } else {
     radVal = 0.1
-    gridY = 3, gridX = 3;
+    gridY = 5, gridX = 5;
 }
 var word = new Shape(W / 2, H / 2, '滑滑♥爱♥小眉的');
 word.getValue()
@@ -102,6 +102,7 @@ function Changeword() {
 }
 setTimeout("Change()", "2000");
 setTimeout(() => {
+    radVal = radVal / 4;
     graVal = 0.05;
     ChangeYears()
 }, 3000);
